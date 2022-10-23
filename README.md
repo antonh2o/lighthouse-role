@@ -33,7 +33,7 @@ lighthouse_access_log_name: lighthouse_access
 Dependencies
 ------------
 
-Требуется роль [clickhouse-role](https://github.com/danilabar/clickhouse-role)
+Требуется роль [clickhouse-role](https://github.com/antonh2o/clickhouse-role)
 
 Example Playbook
 ----------------
@@ -52,7 +52,7 @@ roles:
 post_tasks:
   - name: Show connect URL lighthouse
     debug:
-      msg: "http://{{ ansible_host }}/#http://{{ hostvars['clickhouse-01'].ansible_host }}:8123/?user={{ clickhouse_user }}"
+      msg: "http://{{ ansible_host }}/#http://{{ clickhouse01_ip }}:8123/?user={{ clickhouse_user }}"
 ```
 
 License
